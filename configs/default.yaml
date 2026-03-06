@@ -1,0 +1,46 @@
+# Default configuration for Decision Boundary Visualization
+
+# Dataset settings
+dataset:
+  name: "iris_2d"  # iris_2d, wine_2d, synthetic_blobs, synthetic_classification
+  test_size: 0.3
+  scale: true
+  random_state: 42
+
+# Synthetic data settings (when using synthetic datasets)
+synthetic:
+  n_samples: 300
+  n_classes: 3
+  cluster_std: 1.0
+  dataset_type: "blobs"  # blobs or classification
+
+# Model settings
+models:
+  - "Random Forest"
+  - "SVM (RBF)"
+  - "SVM (Linear)"
+  - "Neural Network"
+  - "Decision Tree"
+  - "k-NN"
+
+# Visualization settings
+visualization:
+  resolution: 0.02
+  figsize: [10, 8]
+  interactive: true
+  projection_method: "umap"  # umap, pca
+  save_plots: true
+  output_dir: "assets/"
+
+# Evaluation settings
+evaluation:
+  stability_iterations: 5
+  noise_level: 0.01
+  cross_validation_folds: 5
+  generate_report: true
+
+# Output settings
+output:
+  save_results: true
+  results_dir: "results/"
+  verbose: true
